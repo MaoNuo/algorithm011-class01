@@ -18,7 +18,8 @@ public class RefactoringDeque {
         System.out.println(deque);
 
         while (deque.size() > 0) {
-            System.out.println(deque.poll());
+            //System.out.println(deque.poll());
+	    System.out.println(deque.removeFirst());
         }
         System.out.println(deque);
 
