@@ -7,6 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         //终止条件：当前节点为目标节点或者为叶子节点
