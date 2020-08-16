@@ -1,0 +1,20 @@
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+    //right是从第16位逐步向右shift一位
+    //left则是从第17位逐步向左shift一位
+    //然后将两个数异或到新的结果中
+        int right = 1 << 15;
+        int left = 1 << 16;
+        int res = 0;
+        for (int i = 0; i < 16; i++) {
+            int move = 2 * i + 1;
+            int rightBit = n & right;
+            int leftBit = n & left;
+            res ^= (rightBit << move) ^ (leftBit >>> move);
+            right >>>= 1;
+            left <<= 1;
+        }
+        return res;
+    }
+}
